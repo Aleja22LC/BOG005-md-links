@@ -34,7 +34,7 @@ En este proyecto encontraras una herramienta...
 
 ![FlujogramaApi](img/Diagrama%20de%20Flujo%20API.PNG)
 
-**Diagrama de flujo API**
+**Diagrama de flujo CLI**
 
 ![FlujogramaCli](img/Diagrama%20de%20Flujo%20CLI.PNG)
 
