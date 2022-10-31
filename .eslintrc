@@ -1,8 +1,17 @@
 {
   "env": {
-    "node": true
+    "node": true, // este era el unico que tenia
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
   },
+  // "parserOptions": {
+  //   "ecmaVersion": 8
+  // },
+      
   "parserOptions": {
-    "ecmaVersion": 8
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   }
+  
 }
