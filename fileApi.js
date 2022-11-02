@@ -1,33 +1,36 @@
 // to do:
-// verificación de ruta => fs.existsSync
-// Verificar ruta absoluta => path.isAbsolute
+// verificar si la ruta existe => fs.existsSync
+// Verificar si la ruta es absoluta => path.isAbsolute
 // y si no convertirla a absoluta => path.resolve
-
-
 
 // importo la libreria de file system
 const fs = require('fs');
 const path = require('path');
 
-// Metodo fs para verificar si la ruta existe
-if(fs.existsSync("./archivo")){
-    console.log("El archivo EXISTE!");
-    }else{
-    console.log("El archivo NO EXISTE!");
+//let route = './fileTest';
+let route = 'C:/LAB/BOG005-md-links/fileTest';
+
+// verificar si la ruta existe con metodo de fs. existsSync 
+// const existsPath = ('./fileTest') => 
+const exists = fs.existsSync(route);
+console.log(exists);
+
+if (exists === false) {
+    console.log('It does not exist');
+} else {
+    // metodo determina si la ruta es absolute o relative
+    let isAbsolutePath = path.isAbsolute(route);
+    //console.log('tipe of route: ', isAbsolutePath);
+    if ( isAbsolutePath === true) {
+        console.log('is absolute: ', route);
+    } else {
+        //metodo que convierte ruta relativa a absoluta
+        let nowPathAbsolute = path.resolve(route);
+        route = nowPathAbsolute;
+       // console.log('new route: ',nowPathAbsolute);
+        console.log('aqui ruta',route);
     }
-
-// metodo determina si la ruta es absolute o relative
-let isAbsolutePath = path.isAbsolute('test/md-links.spec.js');
-console.log(isAbsolutePath);
-
-//metodo que convierte ruta relativa a absoluta
-const nowPathAbsolute = path.resolve('test/md-links.spec.js');
-console.log(nowPathAbsolute);
-
-// Condicional si la ruta no es absoluta
-if (isAbsolutePath == false){
-    nowPathAbsolute
-    console.log(nowPathAbsolute);
+    
 };
 
 /*****************EJEMPLO DE FUNCIÓN****************************/
@@ -38,22 +41,22 @@ if (isAbsolutePath == false){
 //          console.log(nowPathAbsolute);
 //      }
 // }
-// pathAbsolute('test/md-links.spec.js')
+// pathAbsolute(route)
 
-// metodo de fs que lista los archivos y carpetasd de un directorio
-fs.readdir ('', (error, archivos) => {
-    archivos.forEach((archivo) => {
-        if (!error){
-            console.log(archivo);
-        } else {
-            console.log(`No funciona: ${error}`);
-        }
-    })
-});
+// metodo de fs que lista los archivos y carpetas de un directorio => readdirsync? ***************
+// fs.readdir ('', (error, archivos) => {
+//     archivos.forEach((archivo) => {
+//         if (!error){
+//             console.log(archivo);
+//         } else {
+//             console.log(`No funciona: ${error}`);
+//         }
+//     })
+// });
 
 // metodo que nos devuelve la extensión de un archivo
 const extension = path.extname('README.md');
-console.log(extension);
+console.log('aqui ext: ', extension);
 
 // Permite leer un archivo, convertirlo en caracteres especifico => texto que se puede leer (utf-8)
 // fs.readFile('data1.txt', 'utf-8', (error, data) => {
