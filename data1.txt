@@ -1,0 +1,6 @@
+hola aqui prueba de leer documento
+
+[VerificarRuta](https://como.help/nodejs/javascript/como-verificar-si-un-archivo-existe-en-nodejs-asincronicamente)
+[process.argv](https://www.youtube.com/watch?v=YGvrR-vzVaw)
+
+//console.log(data.match(/[^!]\[.+?\]\(.+?\)/g));
