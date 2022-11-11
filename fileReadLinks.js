@@ -14,6 +14,7 @@ let readingText = (newRoute) => {
         }
     });
 };
+console.log('lee el texto: ', newRoute);
 // función para leer links
 let readingLinks = (newRoute) => {
     return new Promise((resolve, reject) => {
@@ -25,6 +26,7 @@ let readingLinks = (newRoute) => {
         }
     });
 };
+console.log('lee los links: ', readingLinks);
 
 // module.exports = {
 //     readingLinks,
