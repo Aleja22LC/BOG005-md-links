@@ -8,8 +8,8 @@ const mdLinks = (path, options = { validate: false }) => {
     //aqui funciones pequenas
     const absolutePath = pathAbsoluteExists(path);
     const mdFiles = isMdFile(absolutePath);
-    //resolve(readAll(mdFiles)) 
-    //.then(response => resolve(response))
+    // resolve(readAll(mdFiles)) 
+    // .then(response => resolve(response))
     Promise.all(readAll(mdFiles))
     .then(response => resolve(response))
   });

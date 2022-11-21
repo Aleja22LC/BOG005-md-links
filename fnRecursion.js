@@ -30,9 +30,9 @@ const isMdFile = (route) => {
 
     return arrayMarkFile;
 
-    readDirectory(terminal[2]);
+    //readDirectory(terminal[2]);
   }
 };
-console.log(isMdFile(terminal[2]));
+console.log('recursion: ',isMdFile(terminal[2]));
 
 module.exports = { isMdFile, };
