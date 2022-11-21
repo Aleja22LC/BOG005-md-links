@@ -1,24 +1,29 @@
 const { readAll } = require('./fnReadLink.js');
 const { isMdFile } = require('./fnRecursion.js');
 const { pathAbsoluteExists } = require('./fnRoute.js');
+const { validateHttp } = require('./fnValidate.js');
 const terminal = process.argv[2]
 
 const mdLinks = (path, options = { validate: false }) => {
   return new Promise((resolve, reject) => {
-    //aqui funciones pequenas
     const absolutePath = pathAbsoluteExists(path);
     const mdFiles = isMdFile(absolutePath);
-    // resolve(readAll(mdFiles)) 
-    // .then(response => resolve(response))
-    Promise.all(readAll(mdFiles))
-    .then(response => resolve(response))
-  });
+    if (options.validate === true) {
+      Promise.all(readAll(mdFiles))
+        .then((response) => validateHttp(response.flat()))
+        .then(respValidate => resolve(respValidate)) // Encadenamiento de promesas
+    } else {
+      Promise.all(readAll(mdFiles))
+        .then((response) => resolve(response.flat()));
+    }
+  })
 };
-mdLinks(terminal)
-  .then((rest) => console.log('respuesta mdLinks: ', rest))
-  .catch((err) => console.log(err));
-// module.exports = {
 
-// };
+mdLinks(terminal, {validate: true}) // se lleva al CLI
+  .then((rest) => console.log("answer mdLinks: ", rest))
+  .catch((err) => err.message)
 
-// va la función mdlinks
+module.exports = {
+  mdLinks,
+}
+

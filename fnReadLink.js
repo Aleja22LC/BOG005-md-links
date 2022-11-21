@@ -24,13 +24,11 @@ const read = (route) => {
           text: 'sorry, no links found',
           file: route
         })
-        return arrLink;
+        // return arrLink;
       }
       resolve(arrLink)
-    }
-    )
+    })
   })
-
 }
 
 const readAll = (arr) => {
@@ -38,7 +36,7 @@ const readAll = (arr) => {
     return read(element)
   });
 }
-Promise.all(readAll(['C:\\LAB\\BOG005-md-links\\fileTest\\proof.md']))
-  .then(response => console.log(response))
+// Promise.all(readAll(['C:\\LAB\\BOG005-md-links\\fileTest\\proof.md']))
+//   .then(response => console.log(response))
 
-module.exports = { readAll, };
+module.exports = { readAll };
