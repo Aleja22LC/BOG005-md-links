@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const terminal = process.argv;
+//const terminal = process.argv;
 
 // **********Función recursiva que recorre las carpetas extrayendo los archivos .md**********
 
@@ -9,7 +9,7 @@ const isMdFile = (route) => {
   const stats = fs.statSync(route)
   if (stats.isFile() && path.extname(route) === ".md") {
     arrayMarkFile.push(route)
-    console.log("This is an .md file", route);
+    //console.log("This is an .md file", route);
   } else {
     if (path.extname(route) === "") {
       // base case. True, es un directorio.
@@ -29,10 +29,8 @@ const isMdFile = (route) => {
     }
 
     return arrayMarkFile;
-
-    //readDirectory(terminal[2]);
   }
 };
-console.log('recursion: ',isMdFile(terminal[2]));
+//console.log('recursion: ',isMdFile(terminal[2]));
 
 module.exports = { isMdFile, };

@@ -1,7 +1,7 @@
 const fs = require('fs');
 //const terminal = process.argv[2];
 const read = (route) => {
-  console.log('Read route: ', route);
+  //console.log('Read route: ', route);
   return new Promise((resolve, reject) => {
     fs.readFile(route, 'utf-8', (error, data) => {
       const expression = /(?<!!)\[(.*?)\]\((.*?)\)/g;
@@ -9,7 +9,7 @@ const read = (route) => {
       const textExp = /(?!\[).*(?=\])/g;
       let arrLink = [];
       if (!error) {
-        console.log('Reading links: ', data.match(expression));
+        //console.log('Reading links: ', data.match(expression));
         const dataVar = data.match(expression)
         dataVar.forEach((link) => {
           arrLink.push({
@@ -30,7 +30,7 @@ const read = (route) => {
     })
   })
 }
-
+// Función que retorna los links que contiene cada archivo .md
 const readAll = (arr) => {
   return arr.map(element => {
     return read(element)

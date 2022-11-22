@@ -1,21 +1,21 @@
-const stats = (arrayProof) => {
-    const objStats = {
-      'Total': arrayProof.length,
-      'Unique': new Set(arrayProof.map((element) => element.href)).size
-    }
-    return objStats
-  }  
-  
-  const statsBrokens = (arrayProof) => {
-    const broken = arrayProof.filter((links) => links.OK === 'fail').length;
-    const total = {
-      'Total': arrayProof.length,
-      'Unique': new Set(arrayProof.map((element) => element.href)).size,
-      'Broken': broken
-    }
-    return total
+const fnStats = (rest) => {
+  const stats = {
+    'Total': rest.length,
+    'Unique': new Set(rest.map((element) => element.href)).size,//.size me saca los elementos unicos
   }
+  return stats
+};
 
-module.exports = { 
-   statsBrokens, stats
+const fnBroken = (rest) => {
+  const broken = rest.filter((links) => links.text === 'fail').length;
+  const total = {
+    'Total': rest.length,
+    'Unique': new Set(rest.map((element) => element.href)).size,
+    'Broken': broken
+  }
+  return total
+};
+
+module.exports = {
+  fnBroken, fnStats
 }

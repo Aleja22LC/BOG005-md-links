@@ -19,11 +19,8 @@ const mdLinks = (path, options = { validate: false }) => {
   })
 };
 
-mdLinks(terminal, {validate: true}) // se lleva al CLI
-  .then((rest) => console.log("answer mdLinks: ", rest))
-  .catch((err) => err.message)
+// mdLinks(terminal, {validate: true}) // se lleva al CLI
+//   .then((rest) => console.log("answer to mdLinks: ", rest))
+//   .catch((err) => err.message)
 
-module.exports = {
-  mdLinks,
-}
-
+module.exports = {mdLinks,}

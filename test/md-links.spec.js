@@ -1,5 +1,5 @@
 const { mdLinks } = require('../index');
-const { dataSample } = require('./example.js');
+const { dataExample } = require('./example.js');
 
 describe('mdLinks', () => {
   it('mdLinks comprobando que es una función', () => {
@@ -8,12 +8,11 @@ describe('mdLinks', () => {
 
   it('mdLinks retorna validate true', (done) => {
    
-      mdLinks(dataSample.pathFile, { validate: true })
+      mdLinks(dataExample.pathFile, { validate: true })
       .then((ans) => {
-        expect(ans).toEqual(dataSample.validateTrue);
+        expect(ans).toBe(dataExample.validateTrue);
         done()
-      })
-    
+      })   
  
   });
   
