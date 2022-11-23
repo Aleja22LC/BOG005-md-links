@@ -7,13 +7,13 @@ describe('mdLinks', () => {
   });
 
   it('mdLinks retorna validate true', (done) => {
-   
-      mdLinks(dataExample.pathFile, { validate: true })
-      .then((ans) => {
-        expect(ans).toBe(dataExample.validateTrue);
+
+    mdLinks(dataExample.pathFile, { validate: true })
+      .then((rest) => {
+        expect(rest).toEqual(dataExample.validateTrue);
         done()
-      })   
- 
+      })
+
   });
-  
+
 });

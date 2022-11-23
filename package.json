@@ -1,8 +1,27 @@
 {
-  "name": "md-links",
-  "version": "0.1.0",
+  "name": "linaleon-md-links",
+  "version": "1.0.0",
   "engines": {
     "node": ">=14.x"
+  },
+  "description": "Library that searches markdown files and validates links",
+  "keywords": [
+    "md-links",
+    "links"
+  ],
+  "homepage": "https://github.com/Aleja22LC/BOG005-md-links#readme",
+  "bugs": {
+    "url": "https://github.com/Aleja22LC/BOG005-md-links/issues"
+  },
+  "license": "ISC",
+  "author": "lina-alejandra-leon",
+  "main": "index.js",
+  "bin": {
+    "md-links": "./fnCli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aleja22LC/BOG005-md-links.git"
   },
   "devDependencies": {
     "jest": "^29.3.1"
