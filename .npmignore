@@ -1,0 +1,6 @@
+.vscode
+.gitattributes
+index.httml
+src
+img
+*.tgz

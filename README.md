@@ -8,12 +8,6 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Diagramas de Flujo](#3-Diagramas-de-Flujo)
 * [4. Implementación de la librería](#4-Implementación-de-la-librería)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Entregables](#6-entregables)
-* [7. Hacker edition](#7-hacker-edition)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
-* [10. Achicando el problema](#10-achicando-el-problema)
 
 ***
 
@@ -40,6 +34,12 @@ En la cual se puede obtener datos basicos con respecto a los links encontrados c
 ![FlujogramaCli](img/Diagrama%20de%20Flujo%20CLI.PNG)
 
 ## 4. Implementación de la librería
+
+### **Instalación**
+
+```
+npm i linaleon-md-links
+```
 
 **Importe** la librería con `require()`
 
