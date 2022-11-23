@@ -21,7 +21,7 @@ Estos archivos `Markdown` normalmente contienen _links_ (vínculos/ligas) que mu
 ## 2. Resumen del proyecto
 
 En este proyecto encontraras **Md-Links** es una librería en JavaScript que maneja una interfaz de línea de comandos (CLI) y que tiene como fin extraer y validar los links que se encuentran dentro de archivos MarkDown (.md).
-En la cual se puede obtener datos basicos con respecto a los links encontrados como la cantitan total delinks, el total de links unicos y el total de links rotos dentro de los archivos.
+En la cual se puede obtener datos basicos con respecto a los links encontrados como la cantidan total de links, el total de links unicos y el total de links rotos, dentro de los archivos.
 
 ## 3. Diagramas de Flujo
 
